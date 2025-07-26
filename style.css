@@ -111,11 +111,11 @@ body {
 
     #container button {
         padding: 8px 16px; /* Reduce button size */
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px; 
     }
 }
 
-/* Button hover and active effects */
+
 #container button:hover {
     background-color: rgb(66, 136, 159);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
