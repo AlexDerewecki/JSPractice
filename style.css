@@ -1,0 +1,135 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(135, 162, 186);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Main container styling */
+#container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Add space between header, options, and timer */
+    align-items: center; /* Center items horizontally */
+    height: auto; /* Adjust height dynamically */
+    width: 300px;
+    padding: 40px;
+    background-color: rgb(113, 187, 187); /* Blue rectangle */
+    border-radius: 10px; /* Softer corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+/* Title styling */
+#title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the header and the rest of the content */
+    color: black;
+}
+
+/* Timer display styling */
+#time {
+    font-family: digital-7, 'Courier New', Courier, monospace; /* Use 'digital-7' font */
+    font-size: 32px; /* Adjust size as needed */
+    color: black;
+}
+
+/* Timer container styling */
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers buttons and time vertically */
+    align-items: center; /* Centers buttons and time horizontally */
+    gap: 20px; /* Add spacing between the time and buttons */
+}
+
+/* Button container styling */
+.btns {
+    display: flex;
+    flex-direction: row; /* Arrange buttons in a row */
+    gap: 10px; /* Add spacing between buttons */
+    justify-content: center;
+}
+
+/* Mode buttons container */
+#modes {
+    display: flex;
+    justify-content: space-between; /* Spread buttons evenly */
+    gap: 10px; /* Add spacing between buttons */
+    width: 100%; /* Ensure the container takes full width */
+    margin-top: 20px; /* Add spacing above the buttons */
+}
+
+/* General button styling */
+#container button, #toggleMode, #timerMode {
+    display: flex;
+    justify-content: center; /* Center the text inside buttons */
+    align-items: center; /* Center the text vertically */
+    flex: 1; /* Make buttons take equal space */
+    padding: 10px 20px; /* Add consistent padding */
+    text-align: center; /* Center-align the text */
+    background-color: rgb(86, 156, 179); /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+}
+
+/* Hover effect for buttons */
+#container button:hover, #toggleMode:hover, #timerMode:hover {
+    background-color: rgb(66, 136, 159); /* Darker color on hover */
+}
+
+/* Active effect for buttons */
+#container button:active, #toggleMode:active, #timerMode:active {
+    background-color: rgb(46, 116, 139); /* Even darker color on click */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    #container {
+        width: 90%; /* Adjust container width for smaller screens */
+        padding: 20px;
+    }
+
+    #modes {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    #toggleMode, #timerMode {
+        width: 100%; /* Make buttons take full width */
+    }
+
+    #container button {
+        padding: 8px 16px; /* Reduce button size */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Button hover and active effects */
+#container button:hover {
+    background-color: rgb(66, 136, 159);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+#container button:active {
+    background-color: rgb(46, 116, 139);
+}
+
+#countdown-settings {
+    display: flex;
+    display: none;
+    flex-direction: column; /* Stack settings vertically */
+    gap: 10px; /* Space between settings */
+    margin-top: 20px; /* Space above settings */
+    width: 100%; /* Full width of the container */
+}
